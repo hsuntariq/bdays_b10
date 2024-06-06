@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const SingleBirthday = ({ id, name, image, age, remove }) => {
   return (
@@ -18,11 +19,8 @@ const SingleBirthday = ({ id, name, image, age, remove }) => {
             <p className="text-info">{age} years</p>
           </div>
         </div>
-        <button
-          onClick={() => remove(id)}
-          className="btn btn-danger align-self-center"
-        >
-          Remove{" "}
+        <button onClick={() => remove(id)} className="btn  align-self-center">
+          <FaTrashAlt color="red" size={30} />
         </button>
       </div>
     </>
