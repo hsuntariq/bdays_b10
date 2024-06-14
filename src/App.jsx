@@ -6,6 +6,8 @@ import FrontPage from "./Apis/FrontPage";
 import ControlledInputs from "./inputs/ControlledInputs";
 import { Toaster } from "react-hot-toast";
 import Todo from "./todoList/Todo";
+import Generator from "./loremGenerator/Generator";
+import { CircleLoader } from "react-spinners";
 const App = () => {
   return (
     <>
@@ -14,7 +16,8 @@ const App = () => {
       {/* <CleanUpFunction /> */}
       {/* <FrontPage /> */}
       {/* <ControlledInputs /> */}
-      <Todo />
+      {/* <Todo /> */}
+      <Generator />
       <Toaster />
     </>
   );
