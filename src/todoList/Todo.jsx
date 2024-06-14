@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SingleTodo from "./SingleTodo";
+import toast from "react-hot-toast";
 
 const Todo = () => {
   const [todo, setTodo] = useState("");
@@ -15,7 +16,7 @@ const Todo = () => {
       setError(false);
 
       setData([...data, todo]);
-
+      toast.success("Todo added successfully!");
       setTodo("");
     }
   };
