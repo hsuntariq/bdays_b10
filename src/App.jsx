@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import Todo from "./todoList/Todo";
 import Generator from "./loremGenerator/Generator";
 import { CircleLoader } from "react-spinners";
+import Colors from "./colorGenerator/Colors";
 const App = () => {
   return (
     <>
@@ -17,7 +18,8 @@ const App = () => {
       {/* <FrontPage /> */}
       {/* <ControlledInputs /> */}
       {/* <Todo /> */}
-      <Generator />
+      {/* <Generator /> */}
+      <Colors />
       <Toaster />
     </>
   );
