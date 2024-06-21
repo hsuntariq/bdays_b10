@@ -9,6 +9,8 @@ import Todo from "./todoList/Todo";
 import Generator from "./loremGenerator/Generator";
 import { CircleLoader } from "react-spinners";
 import Colors from "./colorGenerator/Colors";
+import Accordian from "./accordians/Accordian";
+import Main from "./ProductAPI/Main";
 const App = () => {
   return (
     <>
@@ -19,7 +21,9 @@ const App = () => {
       {/* <ControlledInputs /> */}
       {/* <Todo /> */}
       {/* <Generator /> */}
-      <Colors />
+      {/* <Colors /> */}
+      {/* <Accordian /> */}
+      <Main />
       <Toaster />
     </>
   );
