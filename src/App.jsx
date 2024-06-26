@@ -11,6 +11,11 @@ import { CircleLoader } from "react-spinners";
 import Colors from "./colorGenerator/Colors";
 import Accordian from "./accordians/Accordian";
 import Main from "./ProductAPI/Main";
+import ObjectState from "./objectState/ObjectState";
+import ComplexTodo from "./objectState/ComplexTodo";
+import Ref from "./useRef/Ref";
+import Sidebar from "./useRef/sidebar/Sidebar";
+import Reducer from "./useReducer/Reducer";
 const App = () => {
   return (
     <>
@@ -23,7 +28,12 @@ const App = () => {
       {/* <Generator /> */}
       {/* <Colors /> */}
       {/* <Accordian /> */}
-      <Main />
+      {/* <Main /> */}
+      {/* <ObjectState /> */}
+      {/* <ComplexTodo /> */}
+      {/* <Ref /> */}
+      {/* <Sidebar /> */}
+      <Reducer />
       <Toaster />
     </>
   );
