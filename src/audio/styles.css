@@ -1,0 +1,15 @@
+.move {
+  animation: rotate 4s infinite;
+  transition: all 1s;
+}
+
+@keyframes rotate {
+  from {
+    scale: 0;
+    rotate: 0;
+  }
+  to {
+    scale: 1.3;
+    rotate: 360deg;
+  }
+}

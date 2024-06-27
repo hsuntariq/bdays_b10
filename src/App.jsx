@@ -16,6 +16,8 @@ import ComplexTodo from "./objectState/ComplexTodo";
 import Ref from "./useRef/Ref";
 import Sidebar from "./useRef/sidebar/Sidebar";
 import Reducer from "./useReducer/Reducer";
+import Drilling from "./propDrilling/Drilling";
+import AudioComponent from "./audio/Audio";
 const App = () => {
   return (
     <>
@@ -33,7 +35,9 @@ const App = () => {
       {/* <ComplexTodo /> */}
       {/* <Ref /> */}
       {/* <Sidebar /> */}
-      <Reducer />
+      {/* <Reducer /> */}
+      {/* <Drilling /> */}
+      <AudioComponent />
       <Toaster />
     </>
   );

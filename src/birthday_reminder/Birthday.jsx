@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SingleBirthday from "./SingleBirthday";
 import { bdays } from "./bdays";
+import { AppContext } from "../context/context";
 
 const Birthday = () => {
   const [data, setData] = useState(bdays);
+  const value = useContext(AppContext);
 
   const removePerson = (id) => {
     const newPeople = data.filter((item, index) => {

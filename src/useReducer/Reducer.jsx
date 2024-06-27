@@ -1,34 +1,8 @@
 import React, { useReducer, useState } from "react";
+import { reducer } from "./reducer";
+import SingleTodo from "./SingleTodo";
 
 const Reducer = () => {
-  const reducer = (state, action) => {
-    if (action.type == "EMPTY") {
-      return {
-        ...state,
-        error: true,
-        message: "Please enter data",
-      };
-    }
-
-    if (action.type == "RESET") {
-      return {
-        ...state,
-        error: false,
-        success: false,
-        message: "",
-      };
-    }
-
-    if (action.type == "ADD_TODO") {
-      return {
-        ...state,
-        success: true,
-        message: "Todo added",
-        todos: [...state.todos, action.payload],
-      };
-    }
-  };
-
   const [name, setName] = useState("");
 
   const initialState = {
@@ -45,12 +19,16 @@ const Reducer = () => {
     if (!name) {
       dispatch({ type: "EMPTY" });
     } else {
-      dispatch({ type: "ADD_TODO", payload: name });
+      dispatch({ type: "ADD_TODO", payload: { name, id: Date.now() } });
     }
 
     setTimeout(() => {
       dispatch({ type: "RESET" });
     }, 3000);
+  };
+
+  const handleDelete = (id) => {
+    dispatch({ type: "DELETE_TODO", payload: id });
   };
 
   return (
@@ -79,6 +57,13 @@ const Reducer = () => {
             Add Todo
           </button>
         </form>
+      </div>
+      <div className="container">
+        <div className="row">
+          {state?.todos?.map((item, index) => {
+            return <SingleTodo remove={handleDelete} key={index} {...item} />;
+          })}
+        </div>
       </div>
     </>
   );
